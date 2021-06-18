@@ -1,9 +1,9 @@
 import os
 import cvb
 
-print(os.environ["CVB"])
+print("acquire images from CVMock.vin")
 
-device = cvb.DeviceFactory.open(os.path.join(os.environ["CVB"], "drivers", "CVMock.vin"))
+device = cvb.DeviceFactory.open("/opt/cvb/drivers/CVMock.vin")
 stream = device.stream
 
 stream.start()
@@ -11,6 +11,8 @@ stream.start()
 for i in range(5):
     image, status = stream.wait()
     if status == cvb.WaitStatus.Ok:
-        image.save(os.path.join(".", ".cvb", "test" + str(i) + ".jpg"))
+        image_file = os.path.join(".", ".cvb", "test" + str(i) + ".jpg")
+        image.save(image_file)
+        print("saving: " + image_file)
 
 stream.abort()

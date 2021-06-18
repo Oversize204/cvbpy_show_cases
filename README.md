@@ -1,6 +1,6 @@
-# cvbpy_show_cases
-Some special stuff I'd like to keep around for refernce
+# Running CVBpy in Gitpod
 
+The images below will show once you have run test.py
 
 ![Image 0](.cvb/test0.jpg?raw=true "Title")
 
