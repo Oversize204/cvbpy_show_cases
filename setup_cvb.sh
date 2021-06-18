@@ -21,7 +21,6 @@ sudo dpkg -i --ignore-depends=codemeter cvb-foundation-13.03.004-ubu1804-x86_64.
 sudo dpkg -i --ignore-depends=codemeter cvb-foundation-dev-13.03.004-ubu1804-x86_64.deb
 sudo dpkg -i --ignore-depends=codemeter cvb-tools-13.03.004-ubu1804-x86_64.deb
 sudo dpkg -i --ignore-depends=codemeter cvb-tools-dev-13.03.004-ubu1804-x86_64.deb
-source /etc/profile.d/cvb_environment.sh
 cd -
 cd /opt/cvb/python
 python -m pip install *.whl --force-reinstall
